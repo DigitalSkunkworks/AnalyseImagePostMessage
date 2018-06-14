@@ -50,12 +50,12 @@ namespace AnalyseImagePostMessage
                 }
                 else
                 {
-                    log.Info($"AWS Post Failure.\nAWSAPIResponse={jsonPostContentResponse}");
+                    log.Error($"AWS Post Failure.\nAWSAPIResponse={jsonPostContentResponse}");
                 }
             }
             catch (Exception ex)
             {
-                log.Info($"Post Exception found {ex.Message}");
+                log.Error($"Post Exception found {ex.Message}");
             }
             return httpPostReturnReponse;
         }

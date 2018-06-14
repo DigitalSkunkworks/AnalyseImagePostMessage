@@ -24,17 +24,16 @@ namespace AnalyseImagePostMessage
                 log.Info($"Calling Post Message.");
                 QueueReturnReponse = await HttpPostMessage.JsonPostMessage(myQueueItem.AsString, log);
                 log.Info($"HTTP Reponse Code: {QueueReturnReponse}");
-                if (QueueReturnReponse == false)
+                if (!QueueReturnReponse)
                 {
                     throw new Exception ("HTTP Post Failed.  Throw Exception.");
                 }
             }
             catch (Exception ex)
             {
-                log.Info($"Trigger Exception found: {ex.Message}");
+                log.Error($"Trigger Exception found: {ex.Message}");
                 throw ex;
             }
-            //return QueueReturnReponse;
         }
     }
 }

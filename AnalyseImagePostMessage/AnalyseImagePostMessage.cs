@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AnalyseImagePostMessage
 {
     public static class AnalyseImagePostMessage
-    {
+    { }
         [FunctionName("AnalyseImagePostMessage")]
         public static async Task Run([QueueTrigger("%ocrqueuename%", Connection = "ocrmsgqueue")]CloudQueueMessage myQueueItem, TraceWriter log)
         {

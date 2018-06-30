@@ -20,7 +20,7 @@ namespace AnalyseImagePostMessage
             Boolean httpPostReturnReponse = false;
             //string jsonPostAPIKEY = "%jsonPostAPIKEY%";
             string jsonPostContentResponse = string.Empty;
-            string jsonPostURI = "https://dxvljjs3oc.execute-api.eu-west-2.amazonaws.com/prod/writeTranslation";
+            string jsonPostURI = "https://qd66fmaff8.execute-api.eu-west-2.amazonaws.com/dev/orchestrator";
             
             try
             {
